@@ -1,0 +1,19 @@
+[package]
+name = "ironfish-python-sdk"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "pyironfishlib"
+crate-type = ["cdylib"]
+
+[dependencies]
+bytes = "1.1.0"
+fish_hash = "0.3.0"
+pyo3 = {version = "0.16.0", features = ["extension-module"]}
+
+
+[build-dependencies]
+pyo3-build-config = "0.16.0"
